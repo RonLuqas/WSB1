@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+$_SESSION['username'] = '';
 // Sprawdź, czy użytkownik jest już zalogowany, jeśli tak, przekieruj go do strony głównej
 if(isset($_SESSION['username'])) {
     header("Location: wallet.php");
