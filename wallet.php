@@ -71,7 +71,7 @@
             ?>
 
             
-            <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color:grey;">
+            <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color:cyan;">
                 Final account balance
                 <span class="badge <?php echo $finalBadgeType; ?> rounded-pill">
                 <?php echo $accountBalance; ?> PLN</span>
