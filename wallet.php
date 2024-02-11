@@ -26,14 +26,14 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Zaliczenie</a></li>
+                            <li><a class="dropdown-item" href="#">Akcja1</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="#">Akcja2</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        <a class="nav-link disabled" aria-disabled="true">Niedostepne</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
@@ -50,12 +50,12 @@
             <!-- Saldo początkowe -->
             <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color:lightgrey;">
                 Initial account balance
-                <span class="badge bg-primary rounded-pill">1000 PLN</span>
+                <span class="badge bg-primary rounded-pill">15600 PLN</span>
             </li>
 
             <?php
-            $accountBalance = 1000;
-            $transfersArray = array(300, -1400);
+            $accountBalance = 15600;
+            $transfersArray = array(300,-200,-400,-15600,634,553,-51 ,-1400,-1000);
 
             foreach ($transfersArray as $transfer) {
                 $transferType = $transfer > 0 ? "Incoming" : "Outgoing";
@@ -67,11 +67,11 @@
                 $accountBalance += $transfer;
             }
 
-            $finalBadgeType = $accountBalance >= 0 ? "bg-primary" : "bg-danger";
+            $finalBadgeType = $accountBalance >= 0 ? "bg-green" : "bg-purple";
             ?>
 
-            <!-- Saldo końcowe -->
-            <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color:lightgrey;">
+            
+            <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color:grey;">
                 Final account balance
                 <span class="badge <?php echo $finalBadgeType; ?> rounded-pill">
                 <?php echo $accountBalance; ?> PLN</span>
@@ -91,7 +91,7 @@
         <?php endif; ?>
     </div>
 
-    <!-- Skrypty Bootstrap -->
+    <!--Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
